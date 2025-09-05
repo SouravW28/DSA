@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Booking Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .form-container {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+    h2 {
+      text-align: center;
+      color: #0077b6;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #023e8a;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Vacation Booking Form</h2>
+    <form action="#" method="post">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="+91-XXXXXXXXXX" required>
+
+      <label for="destination">Choose Destination:</label>
+      <select id="destination" name="destination" required>
+        <option value="">-- Select Destination --</option>
+        <option value="bali">Bali, Indonesia</option>
+        <option value="paris">Paris, France</option>
+        <option value="maldives">Maldives</option>
+        <option value="swiss">Swiss Alps, Switzerland</option>
+        <option value="goa">Goa, India</option>
+      </select>
+
+      <label for="dates">Travel Dates:</label>
+      <input type="date" id="start" name="start_date" required> to
+      <input type="date" id="end" name="end_date" required>
+
+      <label for="travelers">Number of Travelers:</label>
+      <input type="number" id="travelers" name="travelers" min="1" max="20" required>
+
+      <label for="message">Special Requests:</label>
+      <textarea id="message" name="message" rows="3" placeholder="Any special requirements?"></textarea>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </div>
+</body>
+</html>
